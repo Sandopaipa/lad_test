@@ -12,6 +12,8 @@ class ShopSpiderPipeline:
     def __init__(self):
         self.book = openpyxl.Workbook()
         self.sheet = self.book.active
+        self.sheet['A1'] = 'Name'
+        self.sheet['B1'] = 'Price'
 
 
     def process_item(self, item, spider):
