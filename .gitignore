@@ -1,2 +1,3 @@
 ./venv/
 ./.idea/
+/shop_spider/output.xls
