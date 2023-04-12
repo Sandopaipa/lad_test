@@ -4,6 +4,8 @@ from ..items import ShopSpiderItem
 
 
 class EnamelSpider(scrapy.Spider):
+    """ Spider that takes the price and
+        product name from the page"""
     name = 'enamel'
     allowed_domains = [
         'krasn.russcvet.ru'
@@ -13,6 +15,8 @@ class EnamelSpider(scrapy.Spider):
     ]
 
     def price_format(self, price_raw, pattern):
+        """ Takes a string with price and returns
+            price as <int> type"""
 
         price = re.findall(pattern=pattern, string=price_raw)
         try:

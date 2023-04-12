@@ -17,6 +17,7 @@ class ShopSpiderPipeline:
         self.sheet['B1'] = 'Price'
 
     def process_item(self, item, spider):
+        """A spreadsheet write method"""
         row_num = self.sheet.max_row + 1
         self.sheet.cell(row=row_num, column=1).value = item['name']
         self.sheet.cell(row=row_num, column=2).value = item['price']
